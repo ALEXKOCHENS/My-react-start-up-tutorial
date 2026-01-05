@@ -1,13 +1,9 @@
-import Rating from "./components/Rating.jsx";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Rating from './components/Rating.jsx';
 const App = () => {
   return (
-    <div>
-      <Header />
+    <>
       <Rating />
-      <Footer />
-    </div>
+    </>
   );
 };
 
