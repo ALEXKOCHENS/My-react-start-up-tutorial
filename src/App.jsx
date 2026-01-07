@@ -1,10 +1,8 @@
-import Rating from './components/Rating.jsx';
-import Lists from './components/Lists.jsx';
+import Star from './components/starProject/Star.jsx';
 const App = () => {
   return (
     <div>
-      <Rating />
-      <Lists />
+      <Star />
     </div>
   );
 };
