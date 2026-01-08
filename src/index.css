@@ -67,6 +67,7 @@ h1 {
   color: yellow;
 }
 .star-span {
+  cursor: pointer;
   padding: 12px;
   font-size: 30px;
   color: gray;
