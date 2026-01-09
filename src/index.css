@@ -5,47 +5,52 @@
 }
 
 body {
-  background-color: blue;
+  background-color: #2563eb;
   font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-}
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
 }
 
 .container {
   width: 100%;
   max-width: 400px;
   margin: 100px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .h1style {
   font-size: 20px;
-  padding-bottom: 24px;
-  margin-bottom: 15px;
-  justify-content: center;
+  margin-bottom: 20px;
   font-weight: bold;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+  margin-bottom: 16px;
 }
 
 .star {
   cursor: pointer;
-  text-align: center;
   font-size: 32px;
   color: gray;
-  display: inline-block;
-  line-height: 1;
   width: 40px;
-  box-sizing: border-box;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
   transition: color 0.2s ease;
 }
 
-.star.active {
-  color: gold;
+.feedbackMessages {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  min-height: 24px;
 }

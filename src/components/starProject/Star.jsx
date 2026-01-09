@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-const Star = () => {
+const Star = ({ heading, feedbackMessages }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className='container'>
-      <p className='h1style'>Rate your Experience</p>
+      <p className='h1style'>{heading}</p>
       <ul>
         {stars.map((star) => (
           <span
@@ -26,6 +26,10 @@ const Star = () => {
           </span>
         ))}
       </ul>
+
+      {rating > 0 && (
+        <p className='feedbackMessages'>{feedbackMessages[rating - 1]}</p>
+      )}
     </div>
   );
 };
