@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import StarComponent from './StarComponent';
+import Modal from './Modal';
 const Star = ({ heading, feedbackMessages }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
@@ -18,19 +19,17 @@ const Star = ({ heading, feedbackMessages }) => {
   return (
     <div className='container'>
       <p className='h1style'>{heading}</p>
-      <ul>
-        {stars.map((star) => (
-          <StarComponent
-            key={star}
-            star={star}
-            rating={rating}
-            hover={hover}
-            ratingClick={setRating}
-            hoverClick={setHover}
-            hoverLeave={() => setHover(null)}
-          />
-        ))}
-      </ul>
+      {stars.map((star) => (
+        <StarComponent
+          key={star}
+          star={star}
+          rating={rating}
+          hover={hover}
+          ratingClick={setRating}
+          hoverClick={setHover}
+          hoverLeave={() => setHover(null)}
+        />
+      ))}
 
       {rating > 0 && (
         <p className='feedbackMessages'>{feedbackMessages[rating - 1]}</p>
@@ -42,21 +41,9 @@ const Star = ({ heading, feedbackMessages }) => {
       >
         Submit
       </button>
-      {/* Modal */}
 
-      {submitted && (
-        <div className='modal-overly'>
-          <div className='modal'>
-            <h2>Thank you</h2>
-            <p>
-              You rated us {rating} star{rating > 1 ? 's' : ''}
-            </p>
-            <button onClick={closeModal} className='close-btn'>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Modal */}
+      <Modal rating={rating} isOpen={submitted} onClose={closeModal} />
     </div>
   );
 };
