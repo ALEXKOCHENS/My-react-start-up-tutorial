@@ -40,23 +40,23 @@ const Star = ({ heading, feedbackMessages }) => {
         className='submit-btn'
         disabled={rating === 0}
       >
-        Submit{' '}
+        Submit
       </button>
       {/* Modal */}
 
-      {
+      {submitted && (
         <div className='modal-overly'>
           <div className='modal'>
             <h2>Thank you</h2>
             <p>
-              You rated us {rating} star{rating > 1 ? 's' : ''}{' '}
+              You rated us {rating} star{rating > 1 ? 's' : ''}
             </p>
             <button onClick={closeModal} className='close-btn'>
               Close
             </button>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 };
