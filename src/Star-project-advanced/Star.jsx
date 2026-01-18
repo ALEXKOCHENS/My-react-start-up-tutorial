@@ -4,6 +4,7 @@ const Star = ({
   star,
   ratingClick,
   hoverClick,
+  resetHoverClick,
   color = 'gold',
 }) => {
   return (
@@ -11,6 +12,7 @@ const Star = ({
       className='star'
       onClick={ratingClick}
       onMouseEnter={hoverClick}
+      onMouseLeave={resetHoverClick}
       style={{
         color: star <= (rating || hover) ? color : '#ccc',
       }}

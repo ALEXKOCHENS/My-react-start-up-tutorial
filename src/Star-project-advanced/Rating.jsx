@@ -20,6 +20,7 @@ const Rating = ({ ProjectHeading }) => {
             rating={rating}
             ratingClick={() => setRating(star)}
             hoverClick={() => setHover(star)}
+            resetHoverClick={() => setHover(null)}
           />
         ))}
         <p className='rating-paragraph'>
