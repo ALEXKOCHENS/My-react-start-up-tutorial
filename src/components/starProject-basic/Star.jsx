@@ -41,8 +41,6 @@ const Star = ({ heading, feedbackMessages }) => {
       >
         Submit
       </button>
-
-      {/* Modal */}
       <Modal rating={rating} isOpen={submitted} onClose={closeModal} />
     </div>
   );

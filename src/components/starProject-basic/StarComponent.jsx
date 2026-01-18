@@ -5,6 +5,7 @@ const StarComponent = ({
   ratingClick,
   hoverClick,
   hoverLeave,
+  color = 'gold',
 }) => {
   return (
     <span
@@ -13,7 +14,7 @@ const StarComponent = ({
       onMouseLeave={hoverLeave}
       className='star'
       style={{
-        color: star <= (hover || rating) ? 'gold' : 'gray',
+        color: star <= (hover || rating) ? color : 'gray',
         fontSize: '32px',
         cursor: 'pointer',
         margin: '5px',

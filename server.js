@@ -13,8 +13,8 @@ const getRectangleArea = (width, height) => {
 console.log(getRectangleArea(50, 40));
 
 const person = {
-  name: "alex kochens",
-  school: "panoah p/s",
+  name: 'alex kochens',
+  school: 'panoah p/s',
   great: () => {
     console.log(`Hello, good morning? `);
   },
@@ -40,12 +40,12 @@ console.log(doubled);
 //ternary operator
 
 const number = 10;
-let message = "";
+let message = '';
 
 if (number % 2 === 0) {
-  message = "Even number!";
+  message = 'Even number!';
 } else {
-  message = "Odd number!";
+  message = 'Odd number!';
 }
 
 console.log(message);
@@ -53,8 +53,6 @@ console.log(message);
 // using the ternary operator.
 
 const num = 1;
-let messages = num % 2 === 0 ? "Even number" : "odd number";
+let messages = num % 2 === 0 ? 'Even number' : 'odd number';
 
 console.log(messages);
-
-// Array methods
