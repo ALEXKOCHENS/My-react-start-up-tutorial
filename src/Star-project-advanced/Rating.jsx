@@ -5,15 +5,17 @@ import Feedback from './Feedback';
 const Rating = ({ ProjectHeading, myTitle }) => {
   const stars = [1, 2, 3, 4, 5];
   const users = [
-    { id: 1, name: 'alex', rating: 4 },
-    { id: 2, name: 'James', rating: 2 },
-    { id: 3, name: 'ricky', rating: 1 },
-    { id: 4, name: 'kent', rating: 5 },
+    { id: 1, name: 'alex' },
+    { id: 2, name: 'James' },
+    { id: 3, name: 'ricky' },
+    { id: 4, name: 'kent' },
   ];
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const resetRating = () => {
-    setRating(0);
+  const [feedBack, setFeedback] = useState(false);
+  const setUserRating = () => {
+    setRating(rating);
+    setFeedback(true);
   };
 
   return (
@@ -32,27 +34,35 @@ const Rating = ({ ProjectHeading, myTitle }) => {
             resetHoverClick={() => setHover(null)}
           />
         ))}
+
         <p
           className='rating-paragraph'
           style={{
             display: rating === 0 ? 'none' : 'block',
           }}
         >
-          You rated Us {rating} star{rating > 1 ? 's' : ''}
+          {rating} star{rating > 1 ? 's' : ''} rated
         </p>
         <button
           className='reset-btn'
-          onClick={resetRating}
+          onClick={setUserRating}
           disabled={rating === 0}
           style={{
             display: rating === 0 ? 'none' : 'block',
             margin: '7px auto',
           }}
         >
-          Reset rating
+          Set rating
         </button>
       </div>
-      <Feedback users={users} key={users.id} />
+
+      <Feedback
+        key={users.id}
+        users={users}
+        rating={rating}
+        isSet={feedBack}
+        stars={stars}
+      />
     </div>
   );
 };
