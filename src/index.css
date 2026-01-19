@@ -11,9 +11,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
   margin: 20px auto;
-  padding: 50px;
+  padding: 30px;
   background: white;
   border-radius: 14px;
   text-align: center;
@@ -40,15 +40,7 @@ body {
   transition: color 0.2s ease;
 }
 
-.feedbackMessages {
-  margin-top: 12px;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  min-height: 24px;
-}
-
-/* submit button */
+/* reset-btn */
 .reset-btn {
   margin-top: 26px;
   font-size: 13px;
@@ -71,42 +63,34 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
-.modal-overly {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  background: white;
-  padding: 20px;
-  margin-bottom: 480px;
-  text-align: center;
-  border-radius: 12px;
-  width: 300px;
-}
-
-.modal h2 {
-  margin-bottom: 1px;
-  color: #333;
-}
-/* Close modal button */
-.close-btn {
-  margin-top: 15px;
-  padding: 10px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: red;
-}
-
 .rating-paragraph {
   padding-top: 14px;
+}
+
+.myTitle {
+  font-weight: bold;
+  font-size: 20px;
+  color: rebeccapurple;
+  margin-bottom: 15px;
+}
+
+.systemFeedback {
+  background: #222;
+  width: 100%;
+  max-width: 360px;
+  margin: 10px auto;
+  color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+.systemFeedback h1 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.logs {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
 }
