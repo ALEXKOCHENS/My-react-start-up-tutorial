@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Star from './Star';
 import Feedback from './Feedback';
+import Button from './Button';
 
 const Rating = ({ ProjectHeading, myTitle }) => {
   const stars = [1, 2, 3, 4, 5];
@@ -47,7 +48,16 @@ const Rating = ({ ProjectHeading, myTitle }) => {
         >
           {rating} star{rating > 1 ? 's' : ''} rated
         </p>
-        <button
+        {/* <button
+          className='reset-btn'
+          onClick={setUserRating}
+          disabled={rating === 0}
+          
+        >
+          Set rating
+        </button> */}
+
+        <Button
           className='reset-btn'
           onClick={setUserRating}
           disabled={rating === 0}
@@ -56,8 +66,8 @@ const Rating = ({ ProjectHeading, myTitle }) => {
             display: feedBack && 'none',
           }}
         >
-          Set rating
-        </button>
+          Set Rating
+        </Button>
       </div>
 
       <Feedback
