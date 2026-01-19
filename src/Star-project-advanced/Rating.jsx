@@ -53,6 +53,7 @@ const Rating = ({ ProjectHeading, myTitle }) => {
           disabled={rating === 0}
           style={{
             margin: '7px auto',
+            display: feedBack && 'none',
           }}
         >
           Set rating
