@@ -17,7 +17,11 @@ const Rating = ({ ProjectHeading, myTitle }) => {
     setRating(rating);
     setFeedback(true);
   };
-
+  const reset = () => {
+    setFeedback(false);
+    setRating(0);
+    setHover(0);
+  };
   return (
     <div>
       <p className='h1style'>{ProjectHeading}</p>
@@ -48,7 +52,6 @@ const Rating = ({ ProjectHeading, myTitle }) => {
           onClick={setUserRating}
           disabled={rating === 0}
           style={{
-            display: rating === 0 ? 'none' : 'block',
             margin: '7px auto',
           }}
         >
@@ -62,6 +65,7 @@ const Rating = ({ ProjectHeading, myTitle }) => {
         rating={rating}
         isSet={feedBack}
         stars={stars}
+        resetClick={reset}
       />
     </div>
   );

@@ -1,4 +1,4 @@
-const Feedback = ({ rating, users, isSet }) => {
+const Feedback = ({ rating, users, isSet, resetClick }) => {
   if (!isSet) {
     return null;
   }
@@ -15,6 +15,16 @@ const Feedback = ({ rating, users, isSet }) => {
           <p className='user-name'>{rating}</p>
         </div>
       ))}
+
+      <button
+        onClick={resetClick}
+        className='reset-button'
+        style={{
+          margin: '10px auto',
+        }}
+      >
+        Reset Rating
+      </button>
     </div>
   );
 };

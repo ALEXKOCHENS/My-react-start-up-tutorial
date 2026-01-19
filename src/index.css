@@ -111,3 +111,13 @@ body {
   justify-content: space-between;
   font-weight: bold;
 }
+
+.reset-button {
+  background: red;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
