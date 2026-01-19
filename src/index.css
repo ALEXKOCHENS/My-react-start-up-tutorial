@@ -61,7 +61,7 @@ body {
   font-weight: bold;
 }
 
-.submit-btn:disabled {
+.reset-btn:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }

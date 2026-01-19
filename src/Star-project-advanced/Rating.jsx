@@ -26,7 +26,7 @@ const Rating = ({ ProjectHeading }) => {
         <p className='rating-paragraph'>
           You rated {rating} star{rating > 1 ? 's' : ''}
         </p>
-        <button className='reset-btn' onClick={resetUI}>
+        <button className='reset-btn' onClick={resetUI} disabled={rating === 0}>
           Reset
         </button>
       </div>
