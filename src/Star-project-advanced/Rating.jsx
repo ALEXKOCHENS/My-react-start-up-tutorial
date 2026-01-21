@@ -71,7 +71,6 @@ const Rating = ({ ProjectHeading, myTitle }) => {
       </div>
 
       <Feedback
-        key={users.id}
         users={users}
         rating={rating}
         isSet={feedBack}

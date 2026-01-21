@@ -1,4 +1,5 @@
 const Button = ({ children, className, onClick, disabled, style }) => {
+  console.log(children);
   return (
     <button
       className={className}

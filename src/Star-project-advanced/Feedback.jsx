@@ -10,7 +10,7 @@ const Feedback = ({ rating, users, isSet, resetClick }) => {
         <p>Rating</p>
       </div>
       {users.map((user) => (
-        <div className='logs'>
+        <div key={user.id} className='logs'>
           {user.name}
           <p className='user-name'>{rating}</p>
         </div>
