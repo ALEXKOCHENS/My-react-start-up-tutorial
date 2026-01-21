@@ -1,3 +1,4 @@
+import Button from './Button';
 const Feedback = ({ rating, users, isSet, resetClick }) => {
   if (!isSet) {
     return null;
@@ -16,7 +17,7 @@ const Feedback = ({ rating, users, isSet, resetClick }) => {
         </div>
       ))}
 
-      <button
+      <Button
         onClick={resetClick}
         className='reset-button'
         style={{
@@ -24,7 +25,7 @@ const Feedback = ({ rating, users, isSet, resetClick }) => {
         }}
       >
         Reset Rating
-      </button>
+      </Button>
     </div>
   );
 };
