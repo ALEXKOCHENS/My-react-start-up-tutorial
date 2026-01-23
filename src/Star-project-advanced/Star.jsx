@@ -1,3 +1,5 @@
+import { FaStar } from 'react-icons/fa';
+
 const Star = ({
   rating,
   hover,
@@ -7,6 +9,8 @@ const Star = ({
   resetHoverClick,
   color = 'gold',
 }) => {
+  const activeValue = rating || hover;
+
   return (
     <span
       className='star'
@@ -14,10 +18,11 @@ const Star = ({
       onMouseEnter={hoverClick}
       onMouseLeave={resetHoverClick}
       style={{
-        color: star <= (rating || hover) ? color : '#ccc',
+        color: star <= activeValue ? color : '#ccc',
+        cursor: 'pointer',
       }}
     >
-      {'\u2605'}
+      <FaStar size={24} />
     </span>
   );
 };
